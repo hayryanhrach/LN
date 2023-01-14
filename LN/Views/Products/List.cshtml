@@ -1,0 +1,16 @@
+﻿
+            <h1>Բոլոր Գործվածքները</h1>
+            <h2>@Model.currCategory</h2>
+            <div class="row mt-5 mb-2">
+        @{
+            foreach(var product in Model.allProducts)
+            {<div class="col-lg-4">
+                <img class="img-thumbnail" src="@product.Img" alt="@product.Name"/>
+                <h2>@product.Name</h2>
+                <p>@product.Desc</p>
+                <p>Գին: @product.Price.ToString() դրամ</p>
+                <p><a class="btn btn-warning" href=#>Մանրամասն</a></p>
+                </div>
+            }
+        }
+        </div>
